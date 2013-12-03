@@ -20,7 +20,9 @@ if [[ -z "$epoch_target" ]]; then
   epoch_target=13
 fi
 
-[ ~/.profile ] && source ~/.profile
+if [ -f ~/.profile ]; then
+  [ ~/.profile ] && source ~/.profile
+fi
 
 if [ -f ~/.zsh-update ]
 then
